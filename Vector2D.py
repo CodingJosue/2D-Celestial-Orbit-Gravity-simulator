@@ -33,4 +33,8 @@ class Vector2D:
         self.y = self.y / self.magnitude
         self.calcMagnitude()
 
+    def setValue(self, x, y):
+        self.x = x
+        self.y = y
+        self.calcMagnitude()
 
