@@ -5,7 +5,7 @@ class Physics:
     G = 6.67428e-11
     @staticmethod
     def rVector(b1: Body, b2 : Body):
-        r = Vector2D(b1.position.x - b2.position.x, b1.position.y - b2.position.y).normalize()
+        r = Vector2D(b1.position.x - b2.position.x, b1.position.y - b2.position.y).normalize().scale(-1)
 
         return r
 

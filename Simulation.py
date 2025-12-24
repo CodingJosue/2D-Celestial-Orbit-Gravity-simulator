@@ -6,6 +6,7 @@ class Simulation:
     def __init__(self):
         pygame.init()
         self.window = pygame.display.set_mode((800,800))
+        self.clock = pygame.time.Clock()
         self.bodies = []
         self.running = True
 
@@ -36,5 +37,8 @@ class Simulation:
 
             #5 refresh the monitor other wise wil ldraw all the planets at each position
             pygame.display.flip()
+
+            #make it run at most 60 frame persecond
+            self.clock.tick(60)
 
 
