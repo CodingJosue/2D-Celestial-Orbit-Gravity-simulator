@@ -1,6 +1,9 @@
+import pygame
 import  Position
 import  Vector2D
 class Body:
+    AU = 1.496e11
+    SCALE = 250/ AU
     def __init__(self, px, py, mass, radius, color):
         self.mass = mass
         self.radius = radius
@@ -16,5 +19,12 @@ class Body:
     def getVelocity(self): return self.velocity
     def getAcceleration(self): return self.acceleration
     def getForce(self): return self.force
+
+    def draw(self, window):
+        px = self.position.x * self.SCALE + (window.get_width() / 2)
+        py = self.position.y * self.SCALE + (window.get_height() / 2)
+        pygame.draw.circle(window, self.color, (int(px), int(py)))
+
+
 
 
