@@ -35,6 +35,5 @@ class Body:
 
     def __eq__(self, other):
         if not isinstance(other, Body): return False
-
-        return self.
+        return self.position.__eq__(other.getPosition()) and self.name == other.name
 
