@@ -26,6 +26,11 @@ class Body:
         py = self.position.y * self.SCALE + (window.get_height() / 2)
         pygame.draw.circle(window, self.color, (int(px), int(py)), self.radius)
 
+    def update(self, force : Vector2D, dt):
+        acceleration = force.scale(1/self.mass) # the new acceleration is based on the sum of all forces no need to sum acceleration
+        self.velocity = self.velocity.add(acceleration.scale(dt))
+        self.position = self.position.add(acceleration.scale(dt))
+
 
 
 
