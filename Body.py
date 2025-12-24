@@ -24,7 +24,7 @@ class Body:
     def draw(self, window):
         px = self.position.x * self.SCALE + (window.get_width() / 2)
         py = self.position.y * self.SCALE + (window.get_height() / 2)
-        pygame.draw.circle(window, self.color, (int(px), int(py)))
+        pygame.draw.circle(window, self.color, (int(px), int(py)), self.radius)
 
 
 
