@@ -4,7 +4,7 @@ import  Vector2D
 class Body:
     AU = 1.496e11
     SCALE = 250/ AU
-    def __init__(self, name,px, py, mass, radius, color):
+    def __init__(self, name, px, py, mass, radius, color):
         self.name = name
         self.mass = mass
         self.radius = radius
@@ -33,5 +33,8 @@ class Body:
         self.position = self.position.add(acceleration.scale(dt))
 
 
+    def __eq__(self, other):
+        if not isinstance(other, Body): return False
 
+        return self.
 
