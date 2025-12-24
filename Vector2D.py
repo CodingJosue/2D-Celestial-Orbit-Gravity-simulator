@@ -27,9 +27,7 @@ class Vector2D:
     def normalize(self):
         if self.magnitude == 0:
             return
-        self.x = self.x / self.magnitude
-        self.y = self.y / self.magnitude
-        self.calcMagnitude()
+        return Vector2D(self.x / self.magnitude, self.y/self.magnitude)
 
     def setValue(self, x, y):
         self.x = x
