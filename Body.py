@@ -15,6 +15,7 @@ class Body:
         self.force = Vector2D(0, 0)
 
 
+    def getMass(self): return self.mass
     def getPosition(self): return self.position
     def getVelocity(self): return self.velocity
     def getAcceleration(self): return self.acceleration
