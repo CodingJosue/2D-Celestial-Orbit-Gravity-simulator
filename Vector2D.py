@@ -20,6 +20,7 @@ class Vector2D:
 
     def calcMagnitude(self):
         self.magnitude = math.sqrt(self.x**2 + self.y**2)
+        return self.magnitude
     # scale the current vector
     def scale(self, factor):
        return Vector2D(self.x * factor, self.y * factor)
