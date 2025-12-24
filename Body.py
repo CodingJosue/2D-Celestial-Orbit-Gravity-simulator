@@ -4,7 +4,8 @@ import  Vector2D
 class Body:
     AU = 1.496e11
     SCALE = 250/ AU
-    def __init__(self, px, py, mass, radius, color):
+    def __init__(self, name,px, py, mass, radius, color):
+        self.name = name
         self.mass = mass
         self.radius = radius
         self.color = color
