@@ -22,9 +22,7 @@ class Vector2D:
         self.magnitude = math.sqrt(self.x**2 + self.y**2)
     # scale the current vector
     def scale(self, factor):
-        self.x = self.x * factor
-        self.y = self.y * factor
-        self.calcMagnitude()
+       return Vector2D(self.x * factor, self.y * factor)
 
     def normalize(self):
         if self.magnitude == 0:
