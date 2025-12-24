@@ -1,6 +1,6 @@
 import math
-import  Body
-import  Vector2D
+from Body import  Body
+from Vector2D import  Vector2D
 class Physics:
     G = 6.67428e-11
     @staticmethod

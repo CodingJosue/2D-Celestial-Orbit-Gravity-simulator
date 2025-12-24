@@ -1,5 +1,5 @@
 import math
-import  Position
+from Position import  Position
 
 class Vector2D:
     def __init__(self, x, y):

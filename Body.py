@@ -1,6 +1,6 @@
 import pygame
-import  Position
-import  Vector2D
+from Position import  Position
+from Vector2D import  Vector2D
 class Body:
     AU = 1.496e11
     SCALE = 250/ AU
@@ -27,13 +27,12 @@ class Body:
         py = self.position.y * self.SCALE + (window.get_height() / 2)
         pygame.draw.circle(window, self.color, (int(px), int(py)), self.radius)
 
-    def update(self, force : Vector2D, dt):
-        acceleration = force.scale(1/self.mass) # the new acceleration is based on the sum of all forces no need to sum acceleration
+    def update(self: Vector2D, dt):
+        acceleration = self.force.scale(1/self.mass) # the new acceleration is based on the sum of all forces no need to sum acceleration
         self.velocity = self.velocity.add(acceleration.scale(dt))
-        self.position = self.position.add(acceleration.scale(dt))
+        self.position = self.position.add(self.velocity.scale(dt))
 
 
     def __eq__(self, other):
-        if not isinstance(other, Body): return False
-        return self.position.__eq__(other.getPosition()) and self.name == other.name
+        return  self is  other
 
