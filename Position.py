@@ -6,5 +6,3 @@ class Position:
     def setPosition(self, x, y):
         self.x = x
         self.y = y
-    def getPosition(self):
-        return self
